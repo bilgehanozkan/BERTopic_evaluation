@@ -183,7 +183,7 @@ class DataLoader:
     def _trump(self) -> Tuple[List[str], List[str]]:
         """Prepare the trump dataset"""
         trump = pd.read_csv(
-            "https://drive.google.com/uc?export=download&id=1xRKHaP-QwACMydlDnyFPEaFdtskJuBa6"
+            "https://www.dropbox.com/s/qbh1lbr08z9cxkj/total.csv?dl=0"
         )
         trump = trump.loc[(trump.comment != ""), :]
         timestamps = trump.date.to_list()
@@ -197,7 +197,7 @@ class DataLoader:
     def _trump_dtm(self) -> Tuple[List[str], List[str]]:
         """Prepare the trump dataset including timestamps"""
         trump = pd.read_csv(
-            "https://drive.google.com/uc?export=download&id=1xRKHaP-QwACMydlDnyFPEaFdtskJuBa6"
+            "https://www.dropbox.com/s/qbh1lbr08z9cxkj/total.csv?dl=0"
         )
         trump = trump.loc[(trump.comment != ""), :]
         timestamps = trump.date.to_list()
