@@ -187,7 +187,7 @@ class DataLoader:
         )
         
         
-        docs = trump.comment.tolist()
+        docs = trump["comment"].tolist()
         docs = [doc.lower().replace("\n", " ") for doc in docs if len(doc) > 2]
 
         return docs
