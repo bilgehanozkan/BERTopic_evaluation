@@ -177,7 +177,7 @@ class DataLoader:
             )
         if not documents_path:
             documents_path = self.doc_path
-        dataset = preprocessor.preprocess_dataset(documents_path= "C:/Users/blghn/Desktop/compare")
+        dataset = preprocessor.preprocess_dataset(documents_path= "C:/Users/blghn/Desktop/compare/trump.txt")
         dataset.save(output_folder)
 
     def _trump(self) -> Tuple[List[str], List[str]]:
