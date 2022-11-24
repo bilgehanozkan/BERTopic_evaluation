@@ -197,7 +197,7 @@ class DataLoader:
         trump = pd.read_csv("C:/Users/blghn/Desktop/Veriseti_dropna/birlestirilmis/total.csv", on_bad_lines = "skip")
         trump = trump.loc[(trump.comment != ""), :]
         timestamps = trump.date.to_list()
-        documents = trump.coment.to_list()
+        documents = trump.comment.to_list()
 
         docs = []
         time = []
