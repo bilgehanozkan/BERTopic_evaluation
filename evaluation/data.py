@@ -183,7 +183,7 @@ class DataLoader:
     def _trump(self) -> Tuple[List[str], List[str]]:
         """Prepare the trump dataset"""
         trump = pd.read_csv(
-            "https://www.dropbox.com/s/jpnis72iobuyjd6/total2.csv?dl=0"
+            "/content/total.csv"
         )
         trump = trump.loc[(trump.comment != ""), :]
         
