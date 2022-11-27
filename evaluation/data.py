@@ -186,10 +186,12 @@ class DataLoader:
             "/content/total.csv"
         )
         trump = trump.loc[(trump.comment != ""), :]
-        
+        timestamps = trump.date.to_list()
         docs = trump.comment.to_list()
         docs = [doc.lower().replace("\n", " ") for doc in docs if len(doc) > 2]
-        
+        timestamps = [
+            timestamp for timestamp, doc in zip(timestamps, docs) if len(doc) > 2
+        ]        
         return docs, timestamps
 
     def _trump_dtm(self) -> Tuple[List[str], List[str]]:
