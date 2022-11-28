@@ -183,7 +183,7 @@ class DataLoader:
     def _trump(self) -> Tuple[List[str], List[str]]:
         """Prepare the trump dataset"""
         trump = pd.read_csv(
-            "https://drive.google.com/uc?id=19prq9ohZYMRJ6CZuO5kTyiWeYDVuDfO0&export=download"
+            "C:/Users/blghn/Desktop/Veriseti_dropna/birlestirilmis/total.csv"
         )
         trump = trump.loc[(trump.comment != ""), :]
         timestamps = trump.date.to_list()
