@@ -245,7 +245,7 @@ class DataLoader:
 
     def _save(self, docs: List[str], save: str):
         """Save the documents"""
-        with open(save, mode="wt", encoding="cp1252") as myfile:
+        with open(save, mode="wt", encoding="utf-8") as myfile:
             myfile.write("\n".join(docs))
 
         self.doc_path = save
