@@ -183,7 +183,7 @@ class DataLoader:
     def _trump(self) -> Tuple[List[str], List[str]]:
         """Prepare the trump dataset"""
         trump = pd.read_csv(
-            "C:/Users/blghn/Desktop/Veriseti_dropna/birlestirilmis/total2.csv"
+            "C:/Users/blghn/Desktop/Veriseti_dropna/birlestirilmis/total.csv"
         )
         trump = trump.loc[(trump.comment != ""), :]
         timestamps = trump.date.to_list()
@@ -245,7 +245,7 @@ class DataLoader:
 
     def _save(self, docs: List[str], save: str):
         """Save the documents"""
-        with open(save, mode="wt", encoding="utf-8") as myfile:
+        with open(save, mode="wt", encoding="cp1252") as myfile:
             myfile.write("\n".join(docs))
 
         self.doc_path = save
