@@ -164,16 +164,16 @@ class DataLoader:
         """
         if preprocessor is None:
             preprocessor = Preprocessing(
-                lowercase=False,
+                lowercase=True,
                 remove_punctuation=False,
                 punctuation=string.punctuation,
                 remove_numbers=False,
-                lemmatize=False,
+                lemmatize=True,
                 language="english",
                 split=False,
                 verbose=True,
                 save_original_indexes=True,
-                remove_stopwords_spacy=False,
+                remove_stopwords_spacy=True,
             )
         if not documents_path:
             documents_path = self.doc_path
